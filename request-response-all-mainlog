@@ -1,0 +1,201 @@
+Request method:	POST
+Request URI:	https://accounts.spotify.com/api/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	refresh_token=AQC98Xo4sNPZmi8p-nPCGogOvTrhC89cSNibMJE6RYVcddgeoiqIFaXIlu6bj0cBxsI4QnLOM8_Urdytz0eS-OdGCmF9UquR7yTY2Z47K1NjDpariygH9OqzjBoqSnZn728
+				grant_type=refresh_token
+				client_secret=420eaf67dfc54d429b0be36dae7ca242
+				client_id=65c257bbf85b4fa28348f68f13e84cef
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+date: Sun, 03 Dec 2023 06:12:55 GMT
+content-type: application/json
+vary: Accept-Encoding
+set-cookie: __Host-device_id=AQBUTGnstcz4LQl200uV0XwkImGxhR8pXFLtNjEgOWgP7nBzmXZkGIL5hrTeykedk8uAfp0IztLLeau9iIMNIP9ncQ8r9T8ieHw;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
+sp-trace-id: c8d9439fc0fa578f
+content-encoding: gzip
+x-envoy-upstream-service-time: 28
+server: envoy
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "access_token": "BQAEy3AYIiYNN92KBghPBB9W0G76lVmMf2IDEZJPYKm-ZSi0PvD_f2lO6DuxOyfHGqIviz67A16pnW-wcv7GbipgKd6vdUZRNRooxx8HZuvltyY746AqMdR1i3No8lWd2w_v3HOZhTeGqZ1otm18nLYGVxTvRNUGdox55N2-3bsBYzMtaD5l_WgLK9WTe4tWPjhWqiI7YWIoilH9QNdlrZGm1yGgkouT5wy2dn3btwHMgn_frvraoYUzhRRMvZNrQYk2xMGOIq6oO0qg",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "scope": "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public"
+}
+Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQAEy3AYIiYNN92KBghPBB9W0G76lVmMf2IDEZJPYKm-ZSi0PvD_f2lO6DuxOyfHGqIviz67A16pnW-wcv7GbipgKd6vdUZRNRooxx8HZuvltyY746AqMdR1i3No8lWd2w_v3HOZhTeGqZ1otm18nLYGVxTvRNUGdox55N2-3bsBYzMtaD5l_WgLK9WTe4tWPjhWqiI7YWIoilH9QNdlrZGm1yGgkouT5wy2dn3btwHMgn_frvraoYUzhRRMvZNrQYk2xMGOIq6oO0qg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "public": false,
+    "description": "New playlist description"
+}
+HTTP/1.1 400 Bad Request
+content-type: application/json; charset=utf-8
+cache-control: private, max-age=0
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:12:56 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 400,
+        "message": "Missing required field: name"
+    }
+}
+Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer invalid_access_token
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "public": false,
+    "name": "New playlist",
+    "description": "New playlist description"
+}
+HTTP/1.1 401 Unauthorized
+www-authenticate: Bearer realm="spotify", error="invalid_token", error_description="Invalid access token"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:12:56 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+        "message": "Invalid access token"
+    }
+}
+Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=invalid_access_token
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "public": false,
+    "name": "New playlist",
+    "description": "New playlist description"
+}
+HTTP/1.1 400 Bad Request
+www-authenticate: Bearer realm="spotify", error="invalid_request", error_description="Only valid bearer authentication supported"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:12:56 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 400,
+        "message": "Only valid bearer authentication supported"
+    }
+}
+Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQBCBWthnBmyC4EDzu9uoozidbojbQZN-t4eT5jBr8bWHbL4IGeCAyiaHbtvrRByoPj03NeRm2xCKRvXxE3lQGvPBCh8PaRQfIpsMrTYZwiZ40q3F2t4DoIe4y0QAMb0Fmc8AmMRnVSS08-uMFncAssh-rz8S5_BmNPV3HeLWpZRNfxAfhfmZUWLx0lQDpEvui0M_7fP8cu-YxfQTLDbbe8miHPUCBJzeSvOX7Q2SSLhJ8Sf6GA1jW_LhClKzaDb-Li655rE8mfONcPz
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "public": false,
+    "name": "New playlist",
+    "description": "New playlist description"
+}
+HTTP/1.1 401 Unauthorized
+www-authenticate: Bearer realm="spotify", error="invalid_token", error_description="The access token expired"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:12:56 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+        "message": "The access token expired"
+    }
+}

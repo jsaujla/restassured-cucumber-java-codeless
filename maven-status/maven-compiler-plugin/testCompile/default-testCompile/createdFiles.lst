@@ -1,0 +1,11 @@
+com/spotify/codeless/support/RequestBodyManager.class
+com/spotify/codeless/support/DataStoreManager.class
+com/spotify/steps/DependencyContainer.class
+com/spotify/steps/GenericSteps.class
+com/spotify/oauth/TokenManager.class
+com/spotify/runner/JUnitRunner.class
+com/spotify/constant/Constants.class
+com/spotify/config/ConfigLoader.class
+com/spotify/runner/TestNgRunner.class
+com/spotify/steps/Hooks.class
+com/spotify/runner/TestNgParallelRunner.class
