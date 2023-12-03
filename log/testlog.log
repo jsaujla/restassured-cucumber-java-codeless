@@ -1,181 +1,286 @@
-2023-12-03 06:12:54,409 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:54,411 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid payload
-2023-12-03 06:12:54,411 - com.spotify.config.ConfigLoader -INFO - Creating instance of ConfigLoader
-2023-12-03 06:12:54,412 - commons.properties.PropertiesManager -INFO - Constructing PropertiesManager with file path: '/home/runner/work/restassured-cucumber-java-codeless/restassured-cucumber-java-codeless/src/test/resources/config-qa.properties'
-2023-12-03 06:12:54,412 - commons.properties.PropertiesManager -INFO - Loading properties file
-2023-12-03 06:12:54,413 - commons.properties.PropertiesManager -INFO - Properties file '/home/runner/work/restassured-cucumber-java-codeless/restassured-cucumber-java-codeless/src/test/resources/config-qa.properties' loaded successfully
-2023-12-03 06:12:54,413 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,413 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
-2023-12-03 06:12:54,414 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
-2023-12-03 06:12:54,414 - commons.restbase.RequestBase -INFO - Creating RequestBuilder
-2023-12-03 06:12:54,841 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
-2023-12-03 06:12:54,841 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
-2023-12-03 06:12:54,842 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
-2023-12-03 06:12:54,846 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
-2023-12-03 06:12:54,846 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,846 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
-2023-12-03 06:12:54,847 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,847 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{access_token}'
-2023-12-03 06:12:54,847 - com.spotify.oauth.TokenManager -INFO - Renewing token
-2023-12-03 06:12:54,848 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,848 - commons.properties.PropertiesManager -INFO - Returning Property of 'client_id' as string
-2023-12-03 06:12:54,848 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,848 - commons.properties.PropertiesManager -INFO - Returning Property of 'client_secret' as string
-2023-12-03 06:12:54,849 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,849 - commons.properties.PropertiesManager -INFO - Returning Property of 'refresh_token' as string
-2023-12-03 06:12:54,849 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,849 - commons.properties.PropertiesManager -INFO - Returning Property of 'grant_type' as string
-2023-12-03 06:12:54,850 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:54,850 - commons.properties.PropertiesManager -INFO - Returning Property of 'accounts.base.uri' as string
-2023-12-03 06:12:54,850 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://accounts.spotify.com'
-2023-12-03 06:12:54,851 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:54,867 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:54,879 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
-2023-12-03 06:12:54,879 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
-2023-12-03 06:12:54,880 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
-2023-12-03 06:12:54,880 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,118 - com.spotify.oauth.TokenManager -INFO - Returning token
-2023-12-03 06:12:56,119 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,128 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
-2023-12-03 06:12:56,131 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
-2023-12-03 06:12:56,131 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,131 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,131 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,132 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'null'
-2023-12-03 06:12:56,132 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,133 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,133 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,133 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
-2023-12-03 06:12:56,133 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,134 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,134 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,135 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
-2023-12-03 06:12:56,135 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"description":"New playlist description"}'
-2023-12-03 06:12:56,136 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,138 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,138 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
-2023-12-03 06:12:56,138 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
-2023-12-03 06:12:56,139 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
-2023-12-03 06:12:56,140 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,398 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
-2023-12-03 06:12:56,402 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '400', expectedValueType: 'Integer'
-2023-12-03 06:12:56,412 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Missing required field: name', expectedValueType: 'String'
-2023-12-03 06:12:56,420 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:56,430 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:56,430 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid Access Token
-2023-12-03 06:12:56,431 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,431 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
-2023-12-03 06:12:56,431 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
-2023-12-03 06:12:56,432 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
-2023-12-03 06:12:56,432 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
-2023-12-03 06:12:56,433 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
-2023-12-03 06:12:56,433 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
-2023-12-03 06:12:56,433 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,434 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
-2023-12-03 06:12:56,434 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,434 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'Bearer invalid_access_token'
-2023-12-03 06:12:56,435 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,437 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
-2023-12-03 06:12:56,438 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
-2023-12-03 06:12:56,438 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,438 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,438 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,439 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New playlist'
-2023-12-03 06:12:56,439 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,440 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,440 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,440 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
-2023-12-03 06:12:56,440 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,440 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,441 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,441 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
-2023-12-03 06:12:56,441 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}'
-2023-12-03 06:12:56,441 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,442 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,442 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
-2023-12-03 06:12:56,442 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
-2023-12-03 06:12:56,442 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
-2023-12-03 06:12:56,443 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,525 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
-2023-12-03 06:12:56,527 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '401', expectedValueType: 'Integer'
-2023-12-03 06:12:56,537 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Invalid access token', expectedValueType: 'String'
-2023-12-03 06:12:56,546 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:56,552 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:56,552 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid Access Token
-2023-12-03 06:12:56,552 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,553 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
-2023-12-03 06:12:56,553 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
-2023-12-03 06:12:56,554 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
-2023-12-03 06:12:56,554 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
-2023-12-03 06:12:56,554 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
-2023-12-03 06:12:56,555 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
-2023-12-03 06:12:56,555 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,556 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
-2023-12-03 06:12:56,556 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,556 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'invalid_access_token'
-2023-12-03 06:12:56,556 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,558 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
-2023-12-03 06:12:56,559 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
-2023-12-03 06:12:56,559 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,559 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,559 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,559 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New playlist'
-2023-12-03 06:12:56,559 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,560 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
-2023-12-03 06:12:56,561 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}'
-2023-12-03 06:12:56,561 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,561 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,561 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
-2023-12-03 06:12:56,562 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
-2023-12-03 06:12:56,562 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
-2023-12-03 06:12:56,562 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,645 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
-2023-12-03 06:12:56,648 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '400', expectedValueType: 'Integer'
-2023-12-03 06:12:56,659 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Only valid bearer authentication supported', expectedValueType: 'String'
-2023-12-03 06:12:56,670 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:56,676 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
-2023-12-03 06:12:56,676 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid Access Token
-2023-12-03 06:12:56,676 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,676 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
-2023-12-03 06:12:56,676 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
-2023-12-03 06:12:56,678 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
-2023-12-03 06:12:56,678 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
-2023-12-03 06:12:56,678 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
-2023-12-03 06:12:56,679 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
-2023-12-03 06:12:56,679 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,679 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
-2023-12-03 06:12:56,679 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,680 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{{expired.access.token}}'
-2023-12-03 06:12:56,680 - commons.properties.PropertiesManager -INFO - Returning Property of 'expired.access.token' as string
-2023-12-03 06:12:56,680 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,681 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
-2023-12-03 06:12:56,681 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
-2023-12-03 06:12:56,681 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New playlist'
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,682 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
-2023-12-03 06:12:56,683 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
-2023-12-03 06:12:56,683 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
-2023-12-03 06:12:56,683 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
-2023-12-03 06:12:56,683 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
-2023-12-03 06:12:56,683 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}'
-2023-12-03 06:12:56,683 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,684 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
-2023-12-03 06:12:56,684 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
-2023-12-03 06:12:56,684 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
-2023-12-03 06:12:56,684 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
-2023-12-03 06:12:56,685 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
-2023-12-03 06:12:56,761 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
-2023-12-03 06:12:56,762 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '401', expectedValueType: 'Integer'
-2023-12-03 06:12:56,772 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'The access token expired', expectedValueType: 'String'
-2023-12-03 06:12:56,781 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:31,087 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:31,089 - com.spotify.steps.Hooks -INFO - Scenario: Verify Playlists. User should be able to create, get and update a playlist
+2023-12-03 06:18:31,090 - com.spotify.config.ConfigLoader -INFO - Creating instance of ConfigLoader
+2023-12-03 06:18:31,091 - commons.properties.PropertiesManager -INFO - Constructing PropertiesManager with file path: '/home/runner/work/restassured-cucumber-java-codeless/restassured-cucumber-java-codeless/src/test/resources/config-qa.properties'
+2023-12-03 06:18:31,091 - commons.properties.PropertiesManager -INFO - Loading properties file
+2023-12-03 06:18:31,091 - commons.properties.PropertiesManager -INFO - Properties file '/home/runner/work/restassured-cucumber-java-codeless/restassured-cucumber-java-codeless/src/test/resources/config-qa.properties' loaded successfully
+2023-12-03 06:18:31,091 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,092 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
+2023-12-03 06:18:31,092 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
+2023-12-03 06:18:31,092 - commons.restbase.RequestBase -INFO - Creating RequestBuilder
+2023-12-03 06:18:31,553 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
+2023-12-03 06:18:31,554 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
+2023-12-03 06:18:31,555 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
+2023-12-03 06:18:31,558 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
+2023-12-03 06:18:31,559 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,559 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:31,559 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,559 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{access_token}'
+2023-12-03 06:18:31,560 - com.spotify.oauth.TokenManager -INFO - Renewing token
+2023-12-03 06:18:31,560 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,560 - commons.properties.PropertiesManager -INFO - Returning Property of 'client_id' as string
+2023-12-03 06:18:31,561 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,561 - commons.properties.PropertiesManager -INFO - Returning Property of 'client_secret' as string
+2023-12-03 06:18:31,561 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,561 - commons.properties.PropertiesManager -INFO - Returning Property of 'refresh_token' as string
+2023-12-03 06:18:31,561 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,562 - commons.properties.PropertiesManager -INFO - Returning Property of 'grant_type' as string
+2023-12-03 06:18:31,562 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:31,562 - commons.properties.PropertiesManager -INFO - Returning Property of 'accounts.base.uri' as string
+2023-12-03 06:18:31,562 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://accounts.spotify.com'
+2023-12-03 06:18:31,564 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:31,576 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:31,589 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
+2023-12-03 06:18:31,589 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
+2023-12-03 06:18:31,590 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
+2023-12-03 06:18:31,590 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:33,556 - com.spotify.oauth.TokenManager -INFO - Returning token
+2023-12-03 06:18:33,556 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:33,563 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
+2023-12-03 06:18:33,567 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
+2023-12-03 06:18:33,567 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:33,567 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:33,567 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:33,568 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New Playlist'
+2023-12-03 06:18:33,568 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:33,568 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:33,568 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:33,568 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
+2023-12-03 06:18:33,568 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:33,569 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:33,569 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:33,569 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
+2023-12-03 06:18:33,569 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New Playlist","description":"New playlist description"}'
+2023-12-03 06:18:33,569 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:33,570 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:33,570 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
+2023-12-03 06:18:33,570 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
+2023-12-03 06:18:33,570 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
+2023-12-03 06:18:33,571 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,009 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:34,026 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'New Playlist', expectedValueType: 'String'
+2023-12-03 06:18:34,037 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'New playlist description', expectedValueType: 'String'
+2023-12-03 06:18:34,047 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'false', expectedValueType: 'Boolean'
+2023-12-03 06:18:34,062 - com.spotify.codeless.support.DataStoreManager -INFO - Storing response body value
+2023-12-03 06:18:34,072 - com.spotify.codeless.support.DataStoreManager -INFO - Storing response body value
+2023-12-03 06:18:34,085 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,085 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:34,085 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,086 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{access_token}'
+2023-12-03 06:18:34,086 - com.spotify.oauth.TokenManager -INFO - Returning token
+2023-12-03 06:18:34,086 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,087 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,087 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'playlists/{playlist_id_from_post_request}'
+2023-12-03 06:18:34,087 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'playlists/{playlist_id_from_post_request}'
+2023-12-03 06:18:34,087 - com.spotify.codeless.support.DataStoreManager -INFO - Find replacement with key: 'playlist_id_from_post_request', replacementsList: '[{playlist_id_from_post_request=52QJzxrl9Wqzz1UooaraY7}, {followers_total=0}, {}, {}]'
+2023-12-03 06:18:34,088 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,256 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:34,259 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '{playlist_id_from_post_request}', expectedValueType: 'String'
+2023-12-03 06:18:34,259 - com.spotify.codeless.support.DataStoreManager -INFO - Returning stored value with variableName: 'playlist_id_from_post_request', variableType: 'String'
+2023-12-03 06:18:34,270 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'New Playlist', expectedValueType: 'String'
+2023-12-03 06:18:34,280 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'New playlist description', expectedValueType: 'String'
+2023-12-03 06:18:34,290 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'false', expectedValueType: 'Boolean'
+2023-12-03 06:18:34,301 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,301 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:34,301 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,302 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{access_token}'
+2023-12-03 06:18:34,303 - com.spotify.oauth.TokenManager -INFO - Returning token
+2023-12-03 06:18:34,303 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,304 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
+2023-12-03 06:18:34,304 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
+2023-12-03 06:18:34,304 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,304 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,305 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,305 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'Updated Playlist'
+2023-12-03 06:18:34,305 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,305 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,305 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,305 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'Updated playlist description'
+2023-12-03 06:18:34,306 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,306 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,306 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,306 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
+2023-12-03 06:18:34,306 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"Updated Playlist","description":"Updated playlist description"}'
+2023-12-03 06:18:34,306 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,307 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,307 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'playlists/{playlist_id_from_post_request}'
+2023-12-03 06:18:34,307 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'playlists/{playlist_id_from_post_request}'
+2023-12-03 06:18:34,307 - com.spotify.codeless.support.DataStoreManager -INFO - Find replacement with key: 'playlist_id_from_post_request', replacementsList: '[{playlist_id_from_post_request=52QJzxrl9Wqzz1UooaraY7}, {followers_total=0}, {}, {}]'
+2023-12-03 06:18:34,308 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,468 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:34,470 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,470 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:34,470 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,470 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{access_token}'
+2023-12-03 06:18:34,470 - com.spotify.oauth.TokenManager -INFO - Returning token
+2023-12-03 06:18:34,471 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,473 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,473 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'playlists/{playlist_id_from_post_request}'
+2023-12-03 06:18:34,473 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'playlists/{playlist_id_from_post_request}'
+2023-12-03 06:18:34,473 - com.spotify.codeless.support.DataStoreManager -INFO - Find replacement with key: 'playlist_id_from_post_request', replacementsList: '[{playlist_id_from_post_request=52QJzxrl9Wqzz1UooaraY7}, {followers_total=0}, {}, {}]'
+2023-12-03 06:18:34,473 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,682 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:34,685 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '{playlist_id_from_post_request}', expectedValueType: 'String'
+2023-12-03 06:18:34,685 - com.spotify.codeless.support.DataStoreManager -INFO - Returning stored value with variableName: 'playlist_id_from_post_request', variableType: 'String'
+2023-12-03 06:18:34,695 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Updated Playlist', expectedValueType: 'String'
+2023-12-03 06:18:34,704 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Updated playlist description', expectedValueType: 'String'
+2023-12-03 06:18:34,716 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'false', expectedValueType: 'Boolean'
+2023-12-03 06:18:34,725 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:34,735 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:34,735 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid payload
+2023-12-03 06:18:34,735 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,735 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
+2023-12-03 06:18:34,736 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
+2023-12-03 06:18:34,736 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
+2023-12-03 06:18:34,736 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
+2023-12-03 06:18:34,737 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
+2023-12-03 06:18:34,737 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
+2023-12-03 06:18:34,737 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,737 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:34,738 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,738 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{access_token}'
+2023-12-03 06:18:34,738 - com.spotify.oauth.TokenManager -INFO - Returning token
+2023-12-03 06:18:34,738 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,739 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
+2023-12-03 06:18:34,739 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
+2023-12-03 06:18:34,739 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'null'
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
+2023-12-03 06:18:34,740 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,741 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,741 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,741 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
+2023-12-03 06:18:34,741 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"description":"New playlist description"}'
+2023-12-03 06:18:34,741 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,742 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,742 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
+2023-12-03 06:18:34,742 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
+2023-12-03 06:18:34,742 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
+2023-12-03 06:18:34,742 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,827 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:34,829 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '400', expectedValueType: 'Integer'
+2023-12-03 06:18:34,837 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Missing required field: name', expectedValueType: 'String'
+2023-12-03 06:18:34,845 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:34,850 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:34,850 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid Access Token
+2023-12-03 06:18:34,851 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,851 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
+2023-12-03 06:18:34,851 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
+2023-12-03 06:18:34,852 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
+2023-12-03 06:18:34,852 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
+2023-12-03 06:18:34,852 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
+2023-12-03 06:18:34,852 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
+2023-12-03 06:18:34,853 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,853 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:34,853 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,853 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'Bearer invalid_access_token'
+2023-12-03 06:18:34,853 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,855 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
+2023-12-03 06:18:34,855 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
+2023-12-03 06:18:34,855 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,855 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,855 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,855 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New playlist'
+2023-12-03 06:18:34,856 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,856 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,856 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,856 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
+2023-12-03 06:18:34,856 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,856 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,857 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,857 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
+2023-12-03 06:18:34,857 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}'
+2023-12-03 06:18:34,857 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,857 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,858 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
+2023-12-03 06:18:34,858 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
+2023-12-03 06:18:34,858 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
+2023-12-03 06:18:34,858 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,932 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:34,935 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '401', expectedValueType: 'Integer'
+2023-12-03 06:18:34,943 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Invalid access token', expectedValueType: 'String'
+2023-12-03 06:18:34,951 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:34,956 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:34,956 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid Access Token
+2023-12-03 06:18:34,956 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,956 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
+2023-12-03 06:18:34,956 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
+2023-12-03 06:18:34,957 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
+2023-12-03 06:18:34,957 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
+2023-12-03 06:18:34,957 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
+2023-12-03 06:18:34,958 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
+2023-12-03 06:18:34,958 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,958 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:34,958 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,958 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'invalid_access_token'
+2023-12-03 06:18:34,958 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,959 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
+2023-12-03 06:18:34,959 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
+2023-12-03 06:18:34,959 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New playlist'
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:34,960 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:34,961 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
+2023-12-03 06:18:34,961 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}'
+2023-12-03 06:18:34,961 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:34,961 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:34,961 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
+2023-12-03 06:18:34,961 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
+2023-12-03 06:18:34,962 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
+2023-12-03 06:18:34,962 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:35,035 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:35,036 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '400', expectedValueType: 'Integer'
+2023-12-03 06:18:35,045 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'Only valid bearer authentication supported', expectedValueType: 'String'
+2023-12-03 06:18:35,052 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:35,057 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX START TEST SCENARIO XXXXXXXXXX
+2023-12-03 06:18:35,058 - com.spotify.steps.Hooks -INFO - Scenario: Verify create Playlists with invalid Access Token
+2023-12-03 06:18:35,058 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:35,058 - commons.properties.PropertiesManager -INFO - Returning Property of 'api.base.uri' as string
+2023-12-03 06:18:35,058 - commons.restbase.RequestBase -INFO - Constructing RequestBase with baseUri: 'https://api.spotify.com/v1'
+2023-12-03 06:18:35,059 - commons.restbase.ResponseBase -INFO - Constructing ResponseBase
+2023-12-03 06:18:35,059 - commons.restbase.ResponseBase -INFO - Creating ResponseSpecBuilder
+2023-12-03 06:18:35,060 - commons.restbase.ResponseBase -INFO - Returning ResponseSpecification
+2023-12-03 06:18:35,060 - com.spotify.steps.GenericSteps -INFO - Constructing GenericSteps
+2023-12-03 06:18:35,060 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:35,060 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'application/json'
+2023-12-03 06:18:35,061 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:35,061 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: '{{expired.access.token}}'
+2023-12-03 06:18:35,061 - commons.properties.PropertiesManager -INFO - Returning Property of 'expired.access.token' as string
+2023-12-03 06:18:35,061 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:35,062 - com.spotify.codeless.support.RequestBodyManager -INFO - Reading JSON file: 'src/test/resources/test-data/CreatePlaylists.json'
+2023-12-03 06:18:35,062 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}' with DataTable
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'name', Value: 'New playlist'
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'description', Value: 'New playlist description'
+2023-12-03 06:18:35,063 - com.spotify.codeless.support.RequestBodyManager -INFO - Updating JSON value
+2023-12-03 06:18:35,064 - com.spotify.codeless.support.RequestBodyManager -INFO - Put value in JSON
+2023-12-03 06:18:35,064 - com.spotify.codeless.support.RequestBodyManager -INFO - Determine new value
+2023-12-03 06:18:35,064 - com.spotify.codeless.support.RequestBodyManager -INFO - Parse value based on existing type. Key: 'public', Value: 'false'
+2023-12-03 06:18:35,064 - com.spotify.codeless.support.RequestBodyManager -INFO - Updated JSON: '{"public":false,"name":"New playlist","description":"New playlist description"}'
+2023-12-03 06:18:35,064 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:35,064 - com.spotify.config.ConfigLoader -INFO - Returning instance of ConfigLoader
+2023-12-03 06:18:35,065 - com.spotify.config.ConfigLoader -INFO - Replacing placeholders with properties: 'users/{{user_id}}/playlists'
+2023-12-03 06:18:35,065 - commons.properties.PropertiesManager -INFO - Returning Property of 'user_id' as string
+2023-12-03 06:18:35,065 - com.spotify.codeless.support.DataStoreManager -INFO - Resolving placeholders with data: 'users/31ddawwwfblnhu5okxeb4geahrmm/playlists'
+2023-12-03 06:18:35,065 - commons.restbase.RequestBase -INFO - Returning RequestSpecification
+2023-12-03 06:18:35,136 - commons.restbase.RequestBase -INFO - Reset RequestSpecification
+2023-12-03 06:18:35,137 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: '401', expectedValueType: 'Integer'
+2023-12-03 06:18:35,144 - com.spotify.codeless.support.DataStoreManager -INFO - Converting or retrieving expected value with expectedValue: 'The access token expired', expectedValueType: 'String'
+2023-12-03 06:18:35,151 - com.spotify.steps.Hooks -INFO - XXXXXXXXXX END TEST SCENARIO XXXXXXXXXX

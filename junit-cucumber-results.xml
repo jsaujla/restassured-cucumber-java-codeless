@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.528" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="Playlists" name="Verify create Playlists with invalid payload - Example #1.1" time="2.015">
+<testsuite name="Cucumber" time="4.274" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="Playlists" name="Verify Playlists. User should be able to create, get and update a playlist" time="3.642">
+<system-out><![CDATA[
+When With request headers...................................................passed
+And With request body: "src/test/resources/test-data/CreatePlaylists.json"..passed
+When User makes a POST request to endpoint: "users/{{user_id}}/playlists"...passed
+Then Response status code should be: 201....................................passed
+And Response body should contains fields....................................passed
+And Store response body value in variable...................................passed
+When User makes a GET request to endpoint: "playlists/{playlist_id_from_post_request}".passed
+Then Response status code should be: 200....................................passed
+When User makes a PUT request to endpoint: "playlists/{playlist_id_from_post_request}".passed
+]]></system-out>
+</testcase>
+<testcase classname="Playlists" name="Verify create Playlists with invalid payload - Example #1.1" time="0.11">
 <system-out><![CDATA[
 When With request headers...................................................passed
 And With request body: "src/test/resources/test-data/CreatePlaylists.json"..passed
@@ -9,7 +22,7 @@ Then Response status code should be: 400....................................pass
 And Response body should contains fields....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Playlists" name="Verify create Playlists with invalid Access Token - Example #1.1" time="0.116">
+<testcase classname="Playlists" name="Verify create Playlists with invalid Access Token - Example #1.1" time="0.101">
 <system-out><![CDATA[
 When With request headers...................................................passed
 And With request body: "src/test/resources/test-data/CreatePlaylists.json"..passed
@@ -18,7 +31,7 @@ Then Response status code should be: 401....................................pass
 And Response body should contains fields....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Playlists" name="Verify create Playlists with invalid Access Token - Example #1.2" time="0.118">
+<testcase classname="Playlists" name="Verify create Playlists with invalid Access Token - Example #1.2" time="0.096">
 <system-out><![CDATA[
 When With request headers...................................................passed
 And With request body: "src/test/resources/test-data/CreatePlaylists.json"..passed
@@ -27,7 +40,7 @@ Then Response status code should be: 400....................................pass
 And Response body should contains fields....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Playlists" name="Verify create Playlists with invalid Access Token - Example #1.3" time="0.105">
+<testcase classname="Playlists" name="Verify create Playlists with invalid Access Token - Example #1.3" time="0.094">
 <system-out><![CDATA[
 When With request headers...................................................passed
 And With request body: "src/test/resources/test-data/CreatePlaylists.json"..passed

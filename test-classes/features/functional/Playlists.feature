@@ -1,3 +1,4 @@
+@regression
 Feature: Playlists
 
   @smoke
@@ -18,7 +19,6 @@ Feature: Playlists
       | variableName                  | variableType | responsePath    |
       | playlist_id_from_post_request | String       | id              |
       | followers_total               | Integer      | followers.total |
-
 
     When With request headers
       | Content-Type     | Authorization  |
@@ -49,7 +49,7 @@ Feature: Playlists
       | {playlist_id_from_post_request} | Updated Playlist | Updated playlist description | false   |
       | String                          | String           | String                       | Boolean |
 
-  @regression
+
   Scenario Outline: Verify create Playlists with invalid payload
     When With request headers
       | Content-Type     | Authorization  |
@@ -67,7 +67,7 @@ Feature: Playlists
       | name | description              | public  | statusCode | error.message                |
       |      | New playlist description | false   | 400        | Missing required field: name |
 
-  @regression
+
   Scenario Outline: Verify create Playlists with invalid Access Token
     When With request headers
       | Content-Type     | Authorization   |

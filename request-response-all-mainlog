@@ -14,14 +14,14 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-date: Sun, 03 Dec 2023 06:12:55 GMT
+date: Sun, 03 Dec 2023 06:18:33 GMT
 content-type: application/json
 vary: Accept-Encoding
-set-cookie: __Host-device_id=AQBUTGnstcz4LQl200uV0XwkImGxhR8pXFLtNjEgOWgP7nBzmXZkGIL5hrTeykedk8uAfp0IztLLeau9iIMNIP9ncQ8r9T8ieHw;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: __Host-device_id=AQBvCrHLkGlv-iTJLbyAGWoZ7Q5IPR1IXONscyyC8GrDgWUFYprNty1tiK5mb0qyXQjKRKOIt6RkOCXrNUITnPIz24u4gtBS0hI;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
 set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
-sp-trace-id: c8d9439fc0fa578f
+sp-trace-id: a60f636909d0e441
 content-encoding: gzip
-x-envoy-upstream-service-time: 28
+x-envoy-upstream-service-time: 24
 server: envoy
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
@@ -30,7 +30,7 @@ Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 Transfer-Encoding: chunked
 
 {
-    "access_token": "BQAEy3AYIiYNN92KBghPBB9W0G76lVmMf2IDEZJPYKm-ZSi0PvD_f2lO6DuxOyfHGqIviz67A16pnW-wcv7GbipgKd6vdUZRNRooxx8HZuvltyY746AqMdR1i3No8lWd2w_v3HOZhTeGqZ1otm18nLYGVxTvRNUGdox55N2-3bsBYzMtaD5l_WgLK9WTe4tWPjhWqiI7YWIoilH9QNdlrZGm1yGgkouT5wy2dn3btwHMgn_frvraoYUzhRRMvZNrQYk2xMGOIq6oO0qg",
+    "access_token": "BQBaQ_bJGujdUSvJxZtedetkDO3jwoDjtJlZGA5UAS2dMQc5Vjdd39GPIP0grmw2mkd3hQrR9vN3aylJXpOjFAxOPh3i3CiskatE4q0gEH9nGGpqfDskPcGl_nRZssDRmoOODz5iJEl_x7FuR7oyPH2dstZvhE4rzTvfe2GzkGtxAWmQD1HZ9xCnfFcPJiBq2AsvOcvDd4qBn5aqg-sP0EuZAbWOm58omxJ-gDkuNc7tCEgpjy0DUe4pVNEjc6WScDpNhatg0Cn-65qQ",
     "token_type": "Bearer",
     "expires_in": 3600,
     "scope": "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public"
@@ -42,7 +42,270 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer BQAEy3AYIiYNN92KBghPBB9W0G76lVmMf2IDEZJPYKm-ZSi0PvD_f2lO6DuxOyfHGqIviz67A16pnW-wcv7GbipgKd6vdUZRNRooxx8HZuvltyY746AqMdR1i3No8lWd2w_v3HOZhTeGqZ1otm18nLYGVxTvRNUGdox55N2-3bsBYzMtaD5l_WgLK9WTe4tWPjhWqiI7YWIoilH9QNdlrZGm1yGgkouT5wy2dn3btwHMgn_frvraoYUzhRRMvZNrQYk2xMGOIq6oO0qg
+Headers:		Authorization=Bearer BQBaQ_bJGujdUSvJxZtedetkDO3jwoDjtJlZGA5UAS2dMQc5Vjdd39GPIP0grmw2mkd3hQrR9vN3aylJXpOjFAxOPh3i3CiskatE4q0gEH9nGGpqfDskPcGl_nRZssDRmoOODz5iJEl_x7FuR7oyPH2dstZvhE4rzTvfe2GzkGtxAWmQD1HZ9xCnfFcPJiBq2AsvOcvDd4qBn5aqg-sP0EuZAbWOm58omxJ-gDkuNc7tCEgpjy0DUe4pVNEjc6WScDpNhatg0Cn-65qQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "public": false,
+    "name": "New Playlist",
+    "description": "New playlist description"
+}
+HTTP/1.1 201 Created
+content-type: application/json; charset=utf-8
+cache-control: private, max-age=0
+location: https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:18:33 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "collaborative": false,
+    "description": "New playlist description",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/52QJzxrl9Wqzz1UooaraY7"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7",
+    "id": "52QJzxrl9Wqzz1UooaraY7",
+    "images": [
+        
+    ],
+    "name": "New Playlist",
+    "owner": {
+        "display_name": "Tester",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31ddawwwfblnhu5okxeb4geahrmm"
+        },
+        "href": "https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm",
+        "id": "31ddawwwfblnhu5okxeb4geahrmm",
+        "type": "user",
+        "uri": "spotify:user:31ddawwwfblnhu5okxeb4geahrmm"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MSw4MjE0MzZiOTM2NzZhNmI4ZjA4NTliZTU4YzhjNTAwZTRhM2ExMDE4",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7/tracks",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:52QJzxrl9Wqzz1UooaraY7"
+}
+Request method:	GET
+Request URI:	https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQBaQ_bJGujdUSvJxZtedetkDO3jwoDjtJlZGA5UAS2dMQc5Vjdd39GPIP0grmw2mkd3hQrR9vN3aylJXpOjFAxOPh3i3CiskatE4q0gEH9nGGpqfDskPcGl_nRZssDRmoOODz5iJEl_x7FuR7oyPH2dstZvhE4rzTvfe2GzkGtxAWmQD1HZ9xCnfFcPJiBq2AsvOcvDd4qBn5aqg-sP0EuZAbWOm58omxJ-gDkuNc7tCEgpjy0DUe4pVNEjc6WScDpNhatg0Cn-65qQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: public, max-age=0
+etag: "MC-IjFmMGU1OTg3Nzc5ZjA5OGQ5MzcxNjcwYTRkZDMxOTM0Ig=="
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:18:34 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "collaborative": false,
+    "description": "New playlist description",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/52QJzxrl9Wqzz1UooaraY7"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7",
+    "id": "52QJzxrl9Wqzz1UooaraY7",
+    "images": [
+        
+    ],
+    "name": "New Playlist",
+    "owner": {
+        "display_name": "Tester",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31ddawwwfblnhu5okxeb4geahrmm"
+        },
+        "href": "https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm",
+        "id": "31ddawwwfblnhu5okxeb4geahrmm",
+        "type": "user",
+        "uri": "spotify:user:31ddawwwfblnhu5okxeb4geahrmm"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "Miw3NGJhODIyMzIyNTBiNjU4YjQ4YTc1Zjg5NGQ2ZmVhYjlkMjY3Mzdi",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7/tracks?offset=0&limit=100",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:52QJzxrl9Wqzz1UooaraY7"
+}
+Request method:	PUT
+Request URI:	https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQBaQ_bJGujdUSvJxZtedetkDO3jwoDjtJlZGA5UAS2dMQc5Vjdd39GPIP0grmw2mkd3hQrR9vN3aylJXpOjFAxOPh3i3CiskatE4q0gEH9nGGpqfDskPcGl_nRZssDRmoOODz5iJEl_x7FuR7oyPH2dstZvhE4rzTvfe2GzkGtxAWmQD1HZ9xCnfFcPJiBq2AsvOcvDd4qBn5aqg-sP0EuZAbWOm58omxJ-gDkuNc7tCEgpjy0DUe4pVNEjc6WScDpNhatg0Cn-65qQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "public": false,
+    "name": "Updated Playlist",
+    "description": "Updated playlist description"
+}
+HTTP/1.1 200 OK
+cache-control: private, max-age=0
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+Content-Length: 0
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:18:34 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Request method:	GET
+Request URI:	https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQBaQ_bJGujdUSvJxZtedetkDO3jwoDjtJlZGA5UAS2dMQc5Vjdd39GPIP0grmw2mkd3hQrR9vN3aylJXpOjFAxOPh3i3CiskatE4q0gEH9nGGpqfDskPcGl_nRZssDRmoOODz5iJEl_x7FuR7oyPH2dstZvhE4rzTvfe2GzkGtxAWmQD1HZ9xCnfFcPJiBq2AsvOcvDd4qBn5aqg-sP0EuZAbWOm58omxJ-gDkuNc7tCEgpjy0DUe4pVNEjc6WScDpNhatg0Cn-65qQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: public, max-age=0
+etag: "MC-IjVmZTNkYTZhMDJkZjAyYTZkYjAzMzk0YWVjOWY5NjcxIg=="
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Sun, 03 Dec 2023 06:18:34 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "collaborative": false,
+    "description": "Updated playlist description",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/52QJzxrl9Wqzz1UooaraY7"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7",
+    "id": "52QJzxrl9Wqzz1UooaraY7",
+    "images": [
+        
+    ],
+    "name": "Updated Playlist",
+    "owner": {
+        "display_name": "Tester",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31ddawwwfblnhu5okxeb4geahrmm"
+        },
+        "href": "https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm",
+        "id": "31ddawwwfblnhu5okxeb4geahrmm",
+        "type": "user",
+        "uri": "spotify:user:31ddawwwfblnhu5okxeb4geahrmm"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "NSwyNjA3NWFlMGE4ZGQ5MjM1YWZhOTU5MmIwNmVmOGU5OTRmNmY3ZDky",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/52QJzxrl9Wqzz1UooaraY7/tracks?offset=0&limit=100",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:52QJzxrl9Wqzz1UooaraY7"
+}
+Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31ddawwwfblnhu5okxeb4geahrmm/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQBaQ_bJGujdUSvJxZtedetkDO3jwoDjtJlZGA5UAS2dMQc5Vjdd39GPIP0grmw2mkd3hQrR9vN3aylJXpOjFAxOPh3i3CiskatE4q0gEH9nGGpqfDskPcGl_nRZssDRmoOODz5iJEl_x7FuR7oyPH2dstZvhE4rzTvfe2GzkGtxAWmQD1HZ9xCnfFcPJiBq2AsvOcvDd4qBn5aqg-sP0EuZAbWOm58omxJ-gDkuNc7tCEgpjy0DUe4pVNEjc6WScDpNhatg0Cn-65qQ
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -64,7 +327,7 @@ access-control-max-age: 604800
 content-encoding: gzip
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
-date: Sun, 03 Dec 2023 06:12:56 GMT
+date: Sun, 03 Dec 2023 06:18:34 GMT
 server: envoy
 Via: HTTP/2 edgeproxy, 1.1 google
 Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -105,7 +368,7 @@ content-type: application/json
 content-encoding: gzip
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
-date: Sun, 03 Dec 2023 06:12:56 GMT
+date: Sun, 03 Dec 2023 06:18:34 GMT
 server: envoy
 Via: HTTP/2 edgeproxy, 1.1 google
 Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -146,7 +409,7 @@ content-type: application/json
 content-encoding: gzip
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
-date: Sun, 03 Dec 2023 06:12:56 GMT
+date: Sun, 03 Dec 2023 06:18:34 GMT
 server: envoy
 Via: HTTP/2 edgeproxy, 1.1 google
 Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -187,7 +450,7 @@ content-type: application/json
 content-encoding: gzip
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
-date: Sun, 03 Dec 2023 06:12:56 GMT
+date: Sun, 03 Dec 2023 06:18:34 GMT
 server: envoy
 Via: HTTP/2 edgeproxy, 1.1 google
 Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
