@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Spotify BDD Parallel Test Suite" parallel="tests" data-provider-thread-count="5">
+    <test name="Spotify BDD Tests">
+        <classes>
+            <class name="com.spotify.runner.TestNgParallelRunner"/>
+        </classes>
+    </test>
+</suite>

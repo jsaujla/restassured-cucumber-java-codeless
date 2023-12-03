@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Spotify BDD Test Suite">
+    <test name="Spotify BDD Tests">
+        <classes>
+            <class name="com.spotify.runner.TestNgRunner"/>
+        </classes>
+    </test>
+</suite>

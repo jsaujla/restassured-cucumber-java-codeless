@@ -1,0 +1,18 @@
+{
+  "public": false,
+  "name": "New playlist",
+  "description": "New playlist description",
+  "descriptionn": {
+    "descriptionnn": "New playlist descriptionnnn",
+    "items": [
+      {
+        "item": "Abc",
+        "itemm": "Def"
+      },
+      {
+        "item": "678",
+        "itemm": "Jkl"
+      }
+    ]
+  }
+}
