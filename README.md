@@ -79,14 +79,6 @@ mvn clean verify -Dsurefire.suiteXmlFiles=testng-parallel.xml
 * Cucumber default HTML report 'cucumber-reports.html' will be available under directory 'target' after test execution finished
 * The test execution logs will be available under directory 'target\log' after test execution finished
 
-### Test Email ###
-* jaspal.automation@gmail.com
-* jaspalautomation || JaspalAutomation
-
-### Helpful references for test development ###
-* To create Schema:
-    * https://www.jsonschema.net/app/schemas/0
-
 ### Project packages/structure ###
 * BDD test scenarios: Refer feature files under directory '\src\test\resources\features'
 * Test script implementation: Refer packages under directory '\src\test\java\com\spotify'
