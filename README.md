@@ -1,7 +1,7 @@
 # README #
 
 ### About the repository ###
-* The repository contains the implementation to demonstrate an effective way to use 'restassured and cucumber with java' to design and develop a REST API codeless test automation framework
+* The repository contains the implementation to demonstrate an effective way to use 'restassured and cucumber with java' to design and develop a REST API codeless style test automation framework
 * The website under test is 'api.spotify'
 * There are 3 test scenarios automated. Few test scenarios execute with different set of test data, which makes the total test count 5
 
@@ -29,6 +29,12 @@
 * Java IDE installed (IntelliJ IDEA or Eclipse)
 * TestNG plugin installed in IDE
 * Cucumber plugin installed in IDE
+
+### Helpful references for test development ###
+* To validate schema 'To check if JSON object(s) is valid':
+  * https://www.jsonschemavalidator.net/
+* To create Schema:
+  * https://www.jsonschema.net/app/schemas/0
 
 ### Technologies used ###
 * Java

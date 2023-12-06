@@ -13,6 +13,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <restassured.version>5.3.2</restassured.version>
         <jacksondatabind.version>2.16.0</jacksondatabind.version>
+        <jsonassert.version>1.5.0</jsonassert.version>
+        <jsonschemavalidator.version>5.3.2</jsonschemavalidator.version>
         <cucumber.version>7.14.1</cucumber.version>
         <testng.version>7.8.0</testng.version>
         <junit.version>5.9.3</junit.version>
@@ -37,14 +39,14 @@
         <dependency>
             <groupId>org.skyscreamer</groupId>
             <artifactId>jsonassert</artifactId>
-            <version>1.5.0</version>
+            <version>${jsonassert.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
-            <version>5.3.2</version>
+            <version>${jsonschemavalidator.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
