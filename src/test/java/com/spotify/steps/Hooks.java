@@ -1,8 +1,8 @@
 package com.spotify.steps;
 
 import com.spotify.config.ConfigLoader;
-import com.spotify.codeless.support.DataStoreManager;
 import com.spotify.codeless.support.RequestBodyManager;
+import com.spotify.codeless.support.DataStoreManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

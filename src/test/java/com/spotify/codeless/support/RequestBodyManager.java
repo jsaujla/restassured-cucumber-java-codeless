@@ -1,8 +1,9 @@
 package com.spotify.codeless.support;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.Option;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,9 +22,18 @@ public class RequestBodyManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestBodyManager.class);
 
     /**
+     * The configuration object for the JsonPath library.
+     * This configuration uses the default settings and adds the DEFAULT_PATH_LEAF_TO_NULL option.
+     * The DEFAULT_PATH_LEAF_TO_NULL option means that if the leaf of a path is missing in the document,
+     * null will be returned instead of throwing an exception.
+     */
+    private static final Configuration conf = Configuration.defaultConfiguration().addOptions(Option.DEFAULT_PATH_LEAF_TO_NULL);
+
+    /**
      * Validates the size of the table.
      *
      * @param table The table to be validated.
+     * @throws IllegalArgumentException If the table does not have two rows.
      */
     public void validateTableSize(List<List<String>> table) {
         if (table.size() != 2) {
@@ -32,146 +42,58 @@ public class RequestBodyManager {
     }
 
     /**
-     * Reads a JSON object from a file.
+     * Reads a JSON document from a file.
      *
-     * @param jsonFilePath The path to the file.
-     * @return The JSON object read from the file.
+     * @param jsonFilePath The path of the JSON file.
+     * @return The JSON document.
      */
-    public JSONObject readJsonFromFile(String jsonFilePath) {
+    public Object readJsonFromFile(String jsonFilePath) {
         LOGGER.info("Reading JSON file: '{}'", jsonFilePath);
-        JSONObject json = null;
+        Object document = null;
         try {
             String jsonString = new String(Files.readAllBytes(Paths.get(jsonFilePath)));
-            json = new JSONObject(jsonString);
+            document = conf.defaultConfiguration().jsonProvider().parse(jsonString);
         } catch (Exception e) {
             LOGGER.error("Failed to read JSON file: '{}'", jsonFilePath, e);
         }
-        return json;
+        return document;
     }
 
     /**
-     * Updates a JSON object with data from a table.
+     * Updates a JSON obj with a data table.
      *
-     * @param json  The JSON object to be updated.
-     * @param table The table containing the data.
+     * @param obj The JSON obj to be updated.
+     * @param table    The data table.
      */
-    public void updateJsonWithDataTable(JSONObject json, List<List<String>> table) {
-        LOGGER.info("Updating JSON: '{}' with DataTable", json.toString());
+    public void updateJsonWithDataTable(Object obj, List<List<String>> table) {
+        LOGGER.info("Updating JSON: '{}' with DataTable", obj.toString());
         for (int i = 0; i < table.get(0).size(); i++) {
             String key = table.get(0).get(i);
             String value = table.get(1).get(i);
             try {
-                updateJsonValue(json, key, value);
-            } catch (JSONException e) {
+                Object existingValue = JsonPath.read(obj, key);
+                Object newValue = determineNewValue(existingValue, value);
+                JsonPath.parse(obj).set(key, newValue);
+            } catch (Exception e) {
                 LOGGER.error("Failed to update JSON", e);
                 throw new RuntimeException(e);
             }
         }
-        LOGGER.info("Updated JSON: '{}'", json);
+        LOGGER.info("Updated JSON: '{}'", obj);
     }
 
     /**
-     * Updates a value in a JSON object.
+     * Determines the new value based on the existing value and the new value.
      *
-     * @param json  The JSON object to be updated.
-     * @param key   The key of the value to be updated.
-     * @param value The new value.
-     * @throws JSONException If the key is not found in the JSON object.
-     */
-    private void updateJsonValue(JSONObject json, String key, String value) throws JSONException {
-        LOGGER.info("Updating JSON value");
-        if (key.contains(".")) {
-            updateNestedJsonValue(json, key, value);
-        } else {
-            putValueInJson(json, key, value);
-        }
-    }
-
-    /**
-     * Updates a nested value in a JSON object.
-     *
-     * @param json  The JSON object to be updated.
-     * @param key   The key of the value to be updated.
-     * @param value The new value.
-     * @throws JSONException If the key is not found in the JSON object.
-     */
-    private void updateNestedJsonValue(JSONObject json, String key, String value) throws JSONException {
-        LOGGER.info("Updating nested JSON value");
-        String[] parts = key.split("\\.");
-        JSONObject lastNestedJson = json;
-        for (int j = 0; j < parts.length - 1; j++) {
-            lastNestedJson = getNestedJson(lastNestedJson, parts[j]);
-        }
-        putValueInJson(lastNestedJson, parts[parts.length - 1], value);
-    }
-
-    /**
-     * Retrieves a nested JSON object from a JSON object.
-     *
-     * @param json The JSON object.
-     * @param key  The key of the nested JSON object.
-     * @return The nested JSON object.
-     * @throws JSONException If the key is not found in the JSON object.
-     */
-    private JSONObject getNestedJson(JSONObject json, String key) throws JSONException {
-        LOGGER.info("Returning nested JSON object");
-        if (key.matches(".+\\[\\d+\\]$")) {
-            return getJsonFromJsonArray(json, key);
-        } else {
-            return json.has(key) ? json.getJSONObject(key) : json.put(key, new JSONObject()).getJSONObject(key);
-        }
-    }
-
-    /**
-     * Retrieves a JSON object from a JSON array within a JSON object.
-     *
-     * @param json The JSON object.
-     * @param key  The key of the JSON array.
-     * @return The JSON object from the JSON array.
-     * @throws JSONException If the key is not found in the JSON object.
-     */
-    private JSONObject getJsonFromJsonArray(JSONObject json, String key) throws JSONException {
-        LOGGER.info("Returning JSON object from JSONArray");
-        String arrayKey = key.substring(0, key.indexOf('['));
-        int index = Integer.parseInt(key.substring(key.indexOf('[') + 1, key.indexOf(']')));
-        if (!json.has(arrayKey)) {
-            json.put(arrayKey, new JSONArray());
-        }
-        JSONArray jsonArray = json.getJSONArray(arrayKey);
-        while (jsonArray.length() <= index) {
-            jsonArray.put(new JSONObject());
-        }
-        return jsonArray.getJSONObject(index);
-    }
-
-    /**
-     * Puts a new value in a JSON object.
-     *
-     * @param json  The JSON object.
-     * @param key   The key of the value to be put.
-     * @param value The new value.
-     * @throws JSONException If the key is not found in the JSON object.
-     */
-    private void putValueInJson(JSONObject json, String key, String value) throws JSONException {
-        LOGGER.info("Put value in JSON");
-        Object newValue = determineNewValue(json, key, value);
-        json.put(key, newValue);
-    }
-
-    /**
-     * Determines the new value to be put in a JSON object.
-     *
-     * @param json  The JSON object.
-     * @param key   The key of the value to be put.
-     * @param value The new value.
+     * @param existingValue The existing value.
+     * @param value         The new value.
      * @return The determined new value.
-     * @throws JSONException If the key is not found in the JSON object.
      */
-    private Object determineNewValue(JSONObject json, String key, String value) throws JSONException {
+    private Object determineNewValue(Object existingValue, String value) {
         LOGGER.info("Determine new value");
         Object newValue = value;
-        if (json.has(key)) {
-            newValue = parseValueBasedOnExistingType(json, key, value);
+        if (existingValue != null) {
+            newValue = parseValueBasedOnExistingType(existingValue, value);
         } else {
             newValue = parseValueBasedOnValue(value);
         }
@@ -181,20 +103,18 @@ public class RequestBodyManager {
     /**
      * Parses a value based on the existing type of a key in a JSON object.
      *
-     * @param json  The JSON object.
-     * @param key   The key of the value to be parsed.
-     * @param value The value to be parsed.
+     * @param existingValue The existing value.
+     * @param value         The value to be parsed.
      * @return The parsed value.
-     * @throws JSONException If the key is not found in the JSON object.
      */
-    private Object parseValueBasedOnExistingType(JSONObject json, String key, String value) throws JSONException {
-        LOGGER.info("Parse value based on existing type. Key: '{}', Value: '{}'", key, value);
+    private Object parseValueBasedOnExistingType(Object existingValue, String value) {
+        LOGGER.info("Parse value based on existing type");
         Object newValue = value;
-        if (json.get(key) instanceof Boolean) {
+        if (existingValue instanceof Boolean) {
             newValue = Boolean.parseBoolean(value);
-        } else if (json.get(key) instanceof Integer) {
+        } else if (existingValue instanceof Integer) {
             newValue = Integer.parseInt(value);
-        } else if (json.get(key) instanceof Double) {
+        } else if (existingValue instanceof Double) {
             newValue = Double.parseDouble(value);
         }
         return newValue;
@@ -220,5 +140,4 @@ public class RequestBodyManager {
         }
         return newValue;
     }
-
 }

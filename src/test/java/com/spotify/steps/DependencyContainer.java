@@ -1,10 +1,10 @@
 package com.spotify.steps;
 
+import commons.restbase.RequestBase;
 import commons.restbase.ResponseBase;
 import io.restassured.response.Response;
-import com.spotify.codeless.support.DataStoreManager;
 import com.spotify.codeless.support.RequestBodyManager;
-import commons.restbase.RequestBase;
+import com.spotify.codeless.support.DataStoreManager;
 
 /**
  * This class is used to store shared object instances and make them available to Hooks and Steps classes.

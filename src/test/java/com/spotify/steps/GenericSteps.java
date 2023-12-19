@@ -1,5 +1,8 @@
 package com.spotify.steps;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.spotify.codeless.support.RequestBodyManager;
 import com.spotify.config.ConfigLoader;
 import com.spotify.oauth.TokenManager;
 import io.cucumber.datatable.DataTable;
@@ -7,11 +10,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import org.assertj.core.api.SoftAssertions;
 import org.hamcrest.CoreMatchers;
-import org.json.JSONObject;
 import com.spotify.codeless.support.DataStoreManager;
-import com.spotify.codeless.support.RequestBodyManager;
 import commons.restbase.RequestBase;
 import commons.restbase.ResponseBase;
 import org.slf4j.Logger;
@@ -96,9 +96,9 @@ public class GenericSteps {
     public void with_request_body(String jsonFilePath, DataTable dataTable) {
         List<List<String>> table = dataTable.asLists(String.class);
         requestBodyManager.validateTableSize(table);
-        JSONObject json = requestBodyManager.readJsonFromFile(jsonFilePath);
-        requestBodyManager.updateJsonWithDataTable(json, table);
-        requestBase.getRequestSpecification().body(json.toString());
+        Object jsonObj = requestBodyManager.readJsonFromFile(jsonFilePath);
+        requestBodyManager.updateJsonWithDataTable(jsonObj, table);
+        requestBase.getRequestSpecification().body(jsonObj);
     }
 
     @When("User makes a POST request to endpoint: {string}")
@@ -108,7 +108,6 @@ public class GenericSteps {
         response = requestBase.getRequestSpecification().post(resolvedEndpointWithConfigFileAndDataStore).
                 then().spec(responseBase.getResponseSpecification()).extract().response();
         requestBase.resetRequestSpecification();
-
     }
 
     @When("User makes a GET request to endpoint: {string}")
